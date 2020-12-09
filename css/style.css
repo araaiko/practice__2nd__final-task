@@ -1,0 +1,147 @@
+/*====================================================================
+reset.css
+
+Chrome/Firefox/Edgeなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
+何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
+ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
+=================================================================== */
+
+* {
+	-webkit-box-sizing: border-box;
+	-webkit-appearance: none;
+	box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+button,
+table,
+tr,
+th,
+td {
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+aside,
+figure,
+figcaption {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+	list-style-type: none;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+img {
+	border: none;
+	vertical-align: bottom;
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+	border-radius: 0;
+}
+
+/*=======================
+全体共通
+====================== */
+
+img {
+	border: none;
+	height: auto;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.3s ease 0s;
+}
+
+section {
+	padding-bottom: 120px;
+	padding-top: 100px;
+}
+
+/*=======================
+inner
+====================== */
+
+.inner {
+	height: inherit;
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+/*=======================
+Section Title
+====================== */
+
+@media screen and (max-width: 1023px) {
+
+section {
+	padding-bottom: 50px;
+	padding-top: 90px;
+}
+
+.inner {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+
+section {
+	padding-bottom: 30px;
+	padding-top: 70px;
+}
+
+.inner {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+}
+

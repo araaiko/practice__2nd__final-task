@@ -1,0 +1,20 @@
+/*=======================
+inner
+====================== */
+
+.inner {
+    width: 100%;
+    max-width: 1200px; //適宜指定
+    margin: 0 auto;
+    height: inherit;
+
+    @include mq("tab") {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @include mq("sp") {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
