@@ -9,11 +9,37 @@
     <link rel="icon" href="./favicon.ico">
     <title></title>
     <meta name="description" content="">
+    <!--==  Google Fonts  ==-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <!--==  drawer.js-css  ==-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+    <!--==  Swiper-css  ==-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--==  my css  ==-->
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
     <!--==  コーディングする箇所  ==-->
+
+    <!--==  drawer.js  ==-->
+    <!-- jquery & iScroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <!-- drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+    <!-- drawer.jsの宣言 -->
+    <script>
+        $(document).ready(function () {
+            $('.drawer').drawer();
+        });
+    </script>
+    <!--==  Swiper  ==-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--==  my js  ==-->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
