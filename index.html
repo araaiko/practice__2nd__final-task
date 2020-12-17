@@ -12,6 +12,9 @@
     <!--==  Google Fonts  ==-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <!--==  Font Awesome  ==-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!--==  drawer.js-css  ==-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
     <!--==  Swiper-css  ==-->
@@ -21,9 +24,378 @@
 
 </head>
 
-<body>
-    <!--==  コーディングする箇所  ==-->
+<body class="drawer drawer--right">
+    <!--==  トップへ戻るボタン  ==-->
+    <div class="totop"><a href="#top"><img src="./img/totop.svg" alt="トップへ戻るボタン"></a></div>
+    <!--==  Header(PC)  ==-->
+    <header class="header header__pc">
+        <div class="inner">
+            <div class="header__flex">
+                <div class="is-pc header__navgation">
+                    <ul class="header__nav">
+                        <li class="header__nav-item"><a href="#news">News</a></li>
+                        <li class="header__nav-item"><a href="#service">Service</a></li>
+                        <li class="header__nav-item"><a href="#results">Results</a></li>
+                        <li class="header__nav-item"><a href="#price">Price</a></li>
+                        <li class="header__nav-item"><a href="#comments">Comments</a></li>
+                        <li class="header__nav-item"><a href="#faqs">FAQs</a></li>
+                        <li class="header__nav-item"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <!--==  Header(SP)  ==-->
+    <header class="is-sp header__sp">
+        <div class="inner">
+            <div class="header__brand">
+                <a href="#" class="header__brand-link">Sample Corp.</a>
+            </div>
+            <button type="button" class="drawer-toggle drawer-hamburger">
+                <span class="sr-only">toggle navigation</span>
+                <span class="drawer-hamburger-icon"></span>
+            </button>
+            <nav class="drawer-nav">
+                <ul class="drawer-menu">
+                    <li class="drawer-menu-item"><a href="#news">News</a></li>
+                    <li class="drawer-menu-item"><a href="#service">Service</a></li>
+                    <li class="drawer-menu-item"><a href="#results">Results</a></li>
+                    <li class="drawer-menu-item"><a href="#price">Price</a></li>
+                    <li class="drawer-menu-item"><a href="#comments">Comments</a></li>
+                    <li class="drawer-menu-item"><a href="#faqs">FAQs</a></li>
+                    <li class="drawer-menu-item"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--==  Top  ==-->
+    <section id="top" class="top">
+        <div class="inner">
+            <div class="top__text">
+                <h1 class="top__title">詩が生れて、画が出来る。<br>とかくに人の世は住みにくい。</h1>
+                <div class="top__sub-title">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</div>
+                <div class="contact-link-btn"><a href="#contact">お問い合わせしてみる</a></div>
+            </div>
+        </div>
+    </section>
+    <!--==  News  ==-->
+    <section id="news" class="news">
+        <div class="inner">
+            <div class="news__box">
+                <h2 class="util-title">News</h2>
+                <ul class="news__items">
+                    <li class="news__item">
+                        <a href="#" class="news__item-link">
+                            <div class="news__item-date">
+                                <div class="news__item-datetime"><time datetime="2019-02-01">2019-02-01</time></div>
+                                <div class="news__item-icon">テキスト</div>
+                            </div>
+                            <div class="news__item-body">
+                                <p class="news__item-title">ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース</p>
+                                <div class="news__item-arrow"><img src="./img/news-arrow.svg" alt="ニュースのページへ飛ぶボタン">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news__item">
+                        <a href="#" class="news__item-link">
+                            <div class="news__item-date">
+                                <div class="news__item-datetime"><time datetime="2019-02-01">2019-02-01</time></div>
+                                <div class="news__item-icon">テキスト</div>
+                            </div>
+                            <div class="news__item-body">
+                                <p class="news__item-title">ニュースニュースニュースニュースニュースニュースニュース</p>
+                                <div class="news__item-arrow"><img src="./img/news-arrow.svg" alt="ニュースのページへ飛ぶボタン">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news__item">
+                        <a href="#" class="news__item-link">
+                            <div class="news__item-date">
+                                <div class="news__item-datetime"><time datetime="2019-02-01">2019-02-01</time></div>
+                                <div class="news__item-icon">テキスト</div>
+                            </div>
+                            <div class="news__item-body">
+                                <p class="news__item-title">ニュースニュースニュースニュースニュースニュースニュース</p>
+                                <div class="news__item-arrow"><img src="./img/news-arrow.svg" alt="ニュースのページへ飛ぶボタン">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="util-btn"><a href="#">MORE</a></div>
+            </div>
+        </div>
+    </section>
+    <!--==  Service  ==-->
+    <section id="service" class="service">
+        <div class="inner">
+            <h2 class="util-title">Service</h2>
+            <ul class="service__items">
+                <li class="service__item">
+                    <div class="service__item-icon"><img src="./img/service1.svg" alt="WEB DESIGNのアイコン"></div>
+                    <div class="service__item-title">WEB DESIGN</div>
+                    <div class="service__item-text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</div>
+                </li>
+                <li class="service__item">
+                    <div class="service__item-icon"><img src="./img/service2.svg" alt="WEB CODINGのアイコン"></div>
+                    <div class="service__item-title">WEB CODING</div>
+                    <div class="service__item-text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</div>
+                </li>
+                <li class="service__item">
+                    <div class="service__item-icon"><img src="./img/service3.svg" alt="CMS CUSTOMIZEのアイコン"></div>
+                    <div class="service__item-title">CMS CUSTOMIZE</div>
+                    <div class="service__item-text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--==  Results  ==-->
+    <section id="results" class="results">
+        <h2 class="util-title">Results</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!--==  Price  ==-->
+    <section id="price" class="price">
+        <div class="inner">
+            <h2 class="util-title">Price</h2>
+            <div class="price__box">
+                <table>
+                    <tr>
+                        <th>row 1</th>
+                        <td>Price ¥10,000</td>
+                    </tr>
+                    <tr>
+                        <th>row 2</th>
+                        <td>Price ¥10,000</td>
+                    </tr>
+                    <tr>
+                        <th>row 3</th>
+                        <td>Price ¥10,000</td>
+                    </tr>
+                </table>
+                <p>※ 上記料金はサンプルです。</p>
+            </div>
+        </div>
+    </section>
+    <!--==  Comments  ==-->
+    <section id="comments" class="comments">
+        <div class="inner">
+            <div class="comments__flex">
+                <div class="comments__left">
+                    <h2 class="util-title">Comments</h2>
+                    <div class="comments__body">
+                        <div class="comments__img"><img src="./img/comments1.png" alt="女性の画像"></div>
+                        <p class="comments__text">
+                            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                    </div>
+                    <div class="comments__body">
+                        <div class="comments__img"><img src="./img/comments2.png" alt="男性の画像"></div>
+                        <p class="comments__text">
+                            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                    </div>
+                </div>
+                <div class="comments__right"><img src="./img/comments3.png" alt="笑っている男女4人が吹き出しカードを一人一枚ずつ持っている画像"></div>
+            </div>
+        </div>
+    </section>
+    <!--==  Q&A  ==-->
+    <section id="faqs" class="faqs">
+        <div class="inner">
+            <h2 class="util-titile">Q&A</h2>
+            <div class="faqs__items">
+                <dl class="faqs__item accordion">
+                    <dt class="accordion__head">
+                        質問質問質問？
+                    </dt>
+                    <dd class="accordion_body">
+                        回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+                    </dd>
+                </dl>
+                <dl class="faqs__item accordion">
+                    <dt class="accordion__head">
+                        質問質問質問？ また、質問は質問質問？
+                    </dt>
+                    <dd class="accordion_body">
+                        回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+                    </dd>
+                </dl>
+                <dl class="faqs__item accordion">
+                    <dt class="accordion__head">
+                        質問質問質問？
+                    </dt>
+                    <dd class="accordion_body">
+                        回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+                    </dd>
+                </dl>
+                <dl class="faqs__item accordion">
+                    <dt class="accordion__head">
+                        質問質問質問？
+                    </dt>
+                    <dd class="accordion_body">
+                        回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+                    </dd>
+                </dl>
+                <dl class="faqs__item accordion">
+                    <dt class="accordion__head">
+                        質問質問質問？
+                    </dt>
+                    <dd class="accordion_body">
+                        回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+                    </dd>
+                </dl>
+                <dl class="faqs__item accordion">
+                    <dt class="accordion__head">
+                        質問質問質問？
+                    </dt>
+                    <dd class="accordion_body">
+                        回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+    <!--==  Access  ==-->
+    <section id="access" class="access">
+        <div class="inner">
+            <div class="access__flex">
+                <div class="access__left">
+                    <h2 class="util-title">Access</h2>
+                    <div class="access__address">〒106-6126<br>東京都港区六本木 6丁目 10-1<br>六本木ヒルズ森タワー</div>
+                </div>
+                <div class="access__right">
+                    <div class="access__map"></div>
+                </div>
+                <div class="access__btn">
+                    <div class="util-btn"><a href="#">Google Maps</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==  Contact Us  ==-->
+    <section id="contact" class="contact">
+        <div class="inner">
+            <div class="contact__box">
+                <div class="contact__titles">
+                    <h2 class="util-title">Contact Us</h2>
+                    <div class="contact__sub-title">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</div>
+                </div>
+                <form id="js-form" action="" method="POST" class="contact__form">
+                    <dl class="contact__form-items">
+                        <!-- セレクトボックス（お問い合わせ種別） -->
+                        <div class="contact__item">
+                            <dt class="contact__label">
+                                <label for="select">お問い合わせ種別</label>
+                            </dt>
+                            <dd class="contact__select">
+                                <select id="select" name="" class="contact__select-arrow">
+                                    <option value="#">選択してください</option>
+                                    <option value="#">−−−</option>
+                                    <option value="#">・・・</option>
+                                    <option value="#">▲▲▲</option>
+                                </select>
+                            </dd>
+                        </div>
+                        <!-- 氏名 -->
+                        <div class="contact__item">
+                            <dt class="contact__label">
+                                <label for="name" class="required-mark">氏名</label>
+                            </dt>
+                            <dd class="contact__input-name">
+                                <input type="text" id="name" name="" placeholder="氏名" required>
+                            </dd>
+                        </div>
+                        <!-- フリガナ -->
+                        <div class="contact__item">
+                            <dt class="contact__label">
+                                <label for="name-2" class="required-mark">フリガナ</label>
+                            </dt>
+                            <dd class="contact__input-name-2">
+                                <input type="text" id="name-2" name="" placeholder="フリガナ" required>
+                            </dd>
+                        </div>
+                        <!-- メールアドレス -->
+                        <div class="contact__item">
+                            <dt class="contact__label">
+                                <label for="mail">メールアドレス</label>
+                            </dt>
+                            <dd class="contact__input-mail">
+                                <input type="email" id="mail" name="" placeholder="sample@gmail.com">
+                            </dd>
+                        </div>
+                        <!-- ラジオボタン（性別）  -->
+                        <div class="contact__item">
+                            <dt class="contact__label">
+                                <label for="gender">性別</label>
+                            </dt>
+                            <dd class="contact__input-radio">
+                                <label><input type="radio" name="gender" value="男性"><span>男性</span></label>
+                                <label><input type="radio" name="gender" value="女性"><span>女性</span></label>
+                            </dd>
+                        </div>
+                        <!-- テキストエリア（メッセージ） -->
+                        <div class="contact__item">
+                            <dt class="contact__label">
+                                <label for="taxtarea">メッセージ</label>
+                            </dt>
+                            <dd class="contact__textarea">
+                                <textarea name="" id="textarea"></textarea>
+                            </dd>
+                        </div>
+                    </dl>
+                    <!-- チェックボタン -->
+                    <div class="contact__check">
+                        <label><input type="checkbox" name="" value="個人情報保護方針に同意する"><span>個人情報保護方針に同意する</span></label>
+                    </div>
+                    <!-- 送信ボタン -->
+                    <input id="js-submit" type="submit" class="contact-btn" value="送信する" disabled>
+                </form>
+                <!-- 送信後に表示する文章 -->
+                <div id="js-success" class="contact-message">
+                    <p>送信完了しました。ありがとうございました。</p>
+                </div>
+                <div id="js-error" class="contact-message -error">
+                    <p>送信に失敗しました。ページを更新して再度送信してください。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==  Footer  ==-->
+    <footer class="footer">
+        <div class="footer__flex">
+            <div class="footer__left">
+                <ul class="footer__nav-items">
+                    <li class="footer__nav-item">
+                        <a href="#" class="footer__nav-item-link sns-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__nav-item-link sns-icon"><i class="fab fa-facebook-square"></i></a>
+                    </li>
+                    <li class="footer__nav-item"><a href="#" class="footer__nav-item-link">サイトマップ</a></li>
+                    <li class="footer__nav-item"><a href="#" class="footer__nav-item-link">個人情報保護方針</a></li>
+                    <li class="footer__nav-item"><a href="#" class="footer__nav-item-link">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            <div class="footer__right">
+                <div class="footer__brand">
+                    <a href="#" class="footer__brand-link">Sample Corp.</a>
+                </div>
+                <div class="footer__copyright">&copy; デイトラ Landing page Sample.</div>
+            </div>
+        </div>
+    </footer>
     <!--==  drawer.js  ==-->
     <!-- jquery & iScroll -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -32,3 +32,21 @@ section {
         padding-bottom: 30px; //適宜指定
     }
 }
+
+.is-pc {
+    display: block;
+}
+
+.is-sp {
+    display: none;
+}
+
+@include mq("sp") {
+    .is-pc {
+        display: none;
+    }
+
+    .is-sp {
+        display: block;
+    }
+}

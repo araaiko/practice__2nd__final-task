@@ -10,7 +10,6 @@ Chrome/Firefox/Edgeなど、各ブラウザはそれぞれデフォルトで効�
 
 * {
     -webkit-box-sizing: border-box;
-    -webkit-appearance: none;
     box-sizing: border-box;
 }
 
@@ -81,5 +80,6 @@ img {
 input[type="submit"],
 input[type="button"],
 input[type="reset"] {
+    -webkit-appearance: none;
     border-radius: 0;
 }
