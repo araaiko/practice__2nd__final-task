@@ -1,9 +1,11 @@
 /*=======================
 全体共通
 ====================== */
-// body {
-
-// }
+body {
+    font-family: $ff-gothic;
+    font-size: $fz-base;
+    color: $font-main-color;
+}
 
 img {
     max-width: 100%;
@@ -12,6 +14,7 @@ img {
 }
 
 a {
+    color: $font-main-color;
     text-decoration: none;
     transition: all 0.3s ease 0s;
 }
