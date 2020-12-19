@@ -1,0 +1,41 @@
+/*=======================
+button
+====================== */
+
+.contact-link-btn {
+    margin-top: 40px;
+    width: 282px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px 0 rgba(62, 62, 62, 0.2);
+
+    @include mq("sp") {
+        margin: 30px auto 0;
+        width: 222px;
+        height: 48px;
+    }
+
+    a {
+        border-radius: inherit;
+        background-color: #ffaa3b;
+        display: inline-block;
+        height: inherit;
+        width: 100%;
+        line-height: 50px;
+        color: $color-white;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0.025em;
+        text-align: center;
+
+        &:hover {
+            background-color: #f18900;
+        }
+
+        @include mq("sp") {
+            height: inherit;
+            line-height: 48px;
+            font-size: $fz-base;
+        }
+    }
+}

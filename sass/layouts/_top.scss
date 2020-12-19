@@ -1,3 +1,55 @@
 /*=======================
 Top
 ====================== */
+.top {
+    background: transparent url("../img/mv.png") no-repeat center center / cover;
+    // height: 648px;
+
+    @include mq('sp') {
+        background-position: center left 22%;
+    }
+}
+
+.top__text {
+    padding-top: 236px;
+    padding-bottom: 153px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+
+    @include mq("sp") {
+        padding-top: 161px;
+        padding-bottom: 230px;
+        margin-top: 68px;
+    }
+
+}
+
+.top__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: (48 / 32);
+    letter-spacing: 0.00063em;
+
+    @include mq('sp') {
+        font-size: 24px;
+        line-height: (40 / 24);
+        letter-spacing: 0;
+    }
+}
+
+.top__sub-title {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: (28 / 18);
+    letter-spacing: 0.025em;
+
+    @include mq('sp') {
+        font-size: 14px;
+        line-height: (20 / 14);
+        letter-spacing: 0;
+        margin-top: 32px;
+
+    }
+}

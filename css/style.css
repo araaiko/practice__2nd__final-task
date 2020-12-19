@@ -99,13 +99,9 @@ img {
 
 a {
 	color: #3e3e3e;
+	cursor: pointer;
 	text-decoration: none;
 	transition: all 0.3s ease 0s;
-}
-
-section {
-	padding-bottom: 120px;
-	padding-top: 100px;
 }
 
 .is-pc {
@@ -114,6 +110,36 @@ section {
 
 .is-sp {
 	display: none;
+}
+
+/*=======================
+button
+====================== */
+
+.contact-link-btn {
+	border-radius: 10px;
+	box-shadow: 0 3px 5px 0 rgba(62, 62, 62, 0.2);
+	height: 50px;
+	margin-top: 40px;
+	width: 282px;
+}
+
+.contact-link-btn a {
+	background-color: #ffaa3b;
+	border-radius: inherit;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	height: inherit;
+	letter-spacing: 0.025em;
+	line-height: 50px;
+	text-align: center;
+	width: 100%;
+}
+
+.contact-link-btn a:hover {
+	background-color: #f18900;
 }
 
 /*=======================
@@ -154,6 +180,8 @@ Header (PC)
 .header {
 	background-color: rgba(255, 255, 255, 0.1);
 	height: 83px;
+	position: fixed;
+	width: 100%;
 }
 
 .header__nav {
@@ -211,6 +239,33 @@ Service
 Top
 ====================== */
 
+.top {
+	background: transparent url("../img/mv.png") no-repeat center center/cover;
+}
+
+.top__text {
+	margin-left: auto;
+	max-width: 600px;
+	padding-bottom: 153px;
+	padding-top: 236px;
+	width: 100%;
+}
+
+.top__title {
+	font-size: 32px;
+	font-weight: bold;
+	letter-spacing: 0.00063em;
+	line-height: 1.5;
+}
+
+.top__sub-title {
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.025em;
+	line-height: 1.55556;
+	margin-top: 40px;
+}
+
 /*=======================
 To top トップへ戻るボタン
 ====================== */
@@ -228,11 +283,6 @@ News
 
 @media screen and (max-width: 1199px) {
 
-section {
-	padding-bottom: 50px;
-	padding-top: 90px;
-}
-
 .inner {
 	padding-left: 24px;
 	padding-right: 24px;
@@ -242,9 +292,9 @@ section {
 
 @media screen and (max-width: 767px) {
 
-section {
-	padding-bottom: 30px;
-	padding-top: 70px;
+.section--sp {
+	padding-bottom: 60px;
+	padding-top: 40px;
 }
 
 .is-pc {
@@ -253,6 +303,18 @@ section {
 
 .is-sp {
 	display: block;
+}
+
+.contact-link-btn {
+	height: 48px;
+	margin: 30px auto 0;
+	width: 222px;
+}
+
+.contact-link-btn a {
+	font-size: 16px;
+	height: inherit;
+	line-height: 48px;
 }
 
 .inner {
@@ -374,6 +436,29 @@ nav li {
 
 nav li:nth-child(n + 2) {
 	margin-top: 12px;
+}
+
+.top {
+	background-position: center left 22%;
+}
+
+.top__text {
+	margin-top: 68px;
+	padding-bottom: 230px;
+	padding-top: 161px;
+}
+
+.top__title {
+	font-size: 24px;
+	letter-spacing: 0;
+	line-height: 1.66667;
+}
+
+.top__sub-title {
+	font-size: 14px;
+	letter-spacing: 0;
+	line-height: 1.42857;
+	margin-top: 32px;
 }
 
 }
