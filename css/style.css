@@ -386,6 +386,57 @@ News
 Price
 ====================== */
 
+.price {
+	padding-bottom: 120px;
+	padding-top: 120px;
+}
+
+.price__box {
+	margin: 60px auto 0;
+	max-width: 960px;
+	width: 100%;
+}
+
+.price__box table {
+	border: 1px solid #707070;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.price__box table tr th,
+.price__box table tr td {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.20833;
+}
+
+.price__box table tr th {
+	background-color: #3e3e3e;
+	border-top: 1px solid #ffffff;
+	color: #ffffff;
+	max-width: 262px;
+	padding: 16px 0;
+	width: 27.3%;
+}
+
+.price__box table tr .th-top {
+	border-top: 1px solid #707070;
+}
+
+.price__box table tr td {
+	background-color: #ffffff;
+	border: 1px solid #707070;
+	max-width: 698px;
+	padding-left: 40px;
+	width: 72.8%;
+}
+
+.price__box p {
+	font-size: 12px;
+	line-height: 1.66667;
+	margin-top: 12px;
+}
+
 /*=======================
 Q&A
 ====================== */
@@ -799,6 +850,19 @@ nav li:nth-child(n + 2) {
 	line-height: 1.42857;
 	margin-top: 12px;
 	width: calc(100% - 45px);
+}
+
+.price__box {
+	margin: 40px auto 0;
+}
+
+.price__box table tr th,
+.price__box table tr td {
+	font-size: 20px;
+}
+
+.price__box table tr td {
+	padding-left: 20px;
 }
 
 .results__box {
