@@ -1,0 +1,135 @@
+/*=======================
+News
+====================== */
+.news {
+    padding: 120px 0;
+
+    @include mq("sp") {
+         padding: 0 0 60px;
+         position: absolute;
+         top: 650px;
+    }
+}
+
+.news__box {
+    width: 100%;
+    max-width: 1200px;
+    background-color: $color-white;
+    padding: 60px 60px 40px;
+    box-shadow: 0 5px 12px 0 #3e3e3e33;
+
+    @include mq("sp") {
+        padding: 40px 0;
+    }
+}
+
+.news__item {
+    position: relative;
+    display: flex;
+    align-items: center; // 子要素を上下中央配置にする
+    padding: 40px 0;
+    border-bottom: 1px solid #cecdcd;
+
+    @include mq("sp") {
+        padding: 14px 16px;
+        display: block;
+    }
+
+    &:first-child {
+        border-top: 1px solid #cecdcd;
+        margin-top: 60px;
+
+        @include mq("sp") {
+            margin-top: 40px;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+        background: transparent url("../img/news-arrow.svg") no-repeat center center / contain;
+        width: 11px;
+        height: 22px;
+    }
+
+    a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+
+        &:hover {
+            background-color: rgba(73, 115, 255, 0.1);
+        }
+    }
+}
+
+.news__item-date {
+    display: flex;
+    width: (98px + 40px + 121px + 40px);
+
+    @include mq("sp") {
+        width: 100%;
+    }
+}
+
+.news__item-datetime {
+    font-size: 18px;
+    line-height: (26 / 18);
+    letter-spacing: 0.45px;
+
+    @include mq("sp") {
+        font-size: 14px;
+    }
+}
+
+.news__item-icon {
+    font-size: 14px;
+    width: 117px;
+    height: 30px;
+    border-radius: 50px;
+    border: 2px solid #3b69ff;
+    line-height: 26px;
+    text-align: center;
+    margin-left: 40px;
+
+    @include mq("sp") {
+        font-size: 12px;
+        width: 81px;
+        height: 20px;
+        line-height: 16px;
+        margin-left: 24px;
+    }
+}
+
+.news__item-body {
+    display: flex;
+    align-items: center; // 子要素を上下中央配置にする
+    width: calc(100% - (299px + 83px));
+    font-size: 18px;
+    line-height: (28 / 18);
+    letter-spacing: 0.45px;
+
+    @include mq("sp") {
+        width: calc(100% - 45px);
+        font-size: 14px;
+        line-height: (20 / 14);
+        letter-spacing: 0;
+        margin-top: 12px;
+    }
+}
+
+.news__item-arrow {
+    margin-left: auto;
+
+    //  img {
+    //  width: 11px;
+    //  height: 22px;
+
+    //  }
+}

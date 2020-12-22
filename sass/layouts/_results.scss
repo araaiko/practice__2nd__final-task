@@ -1,3 +1,114 @@
 /*=======================
 Results
 ====================== */
+.results__box {
+    width: 100%;
+    max-width: 1240px;
+    margin-left: auto;
+    background-color: $font-main-color;
+    padding: 60px 0 60px 60px;
+
+    @include mq("sp") {
+        padding: 40px 0;
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 60px; // ページネーションを外側に出すために記述
+
+    @include mq("sp") {
+        padding-bottom: 44px;
+        padding-left: 16px;
+    }
+}
+
+.swiper-wrapper {
+    margin-top: 60px;
+}
+
+.swiper-slide {
+    // text-align: center;
+    // font-size: 18px;
+    // background: #fff;
+    width: 100%;
+    max-width: 400px;
+
+    a {
+        display: inline-block;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    @include mq("sp") {
+        max-width: 274px;
+    }
+}
+
+.swiper-slide-body {
+    background-color: $color-white;
+    padding: 16px;
+
+    @include mq("sp") {
+        padding: 12px;
+    }
+}
+
+.swiper-slide-title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: (24 / 20);
+
+    @include mq("sp") {
+        font-size: 14px;
+        line-height: (16 / 14);
+        letter-spacing: 0.01px;
+    }
+}
+
+.swiper-slide-text {
+    margin-top: 16px;
+    line-height: (24 / 16);
+
+    @include mq("sp") {
+        font-size: 12px;
+        line-height: (18 / 12);
+        letter-spacing: 0.01px;
+        margin-top: 12px;
+    }
+}
+
+.swiper-pagination {
+    text-align: left;
+
+    @include mq("sp") {
+        text-align: center;
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background-color: $color-white;
+    border: 3px solid $font-main-color; // 二重丸を作る、内側の空白部分を表現
+    opacity: 1;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 6px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0;
+}
+
+.swiper-pagination-bullet-active {
+    box-shadow: 0 0 0 1px $color-white; // 二重丸を作る、外側の線を表現
+
+    &:focus {
+        outline: none;
+    }
+}

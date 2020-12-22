@@ -39,3 +39,66 @@ button
         }
     }
 }
+
+.util-btn {
+    margin-top: 40px;
+    border: 1px solid #707070;
+    width: 236px;
+    height: 64px;
+
+    a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: (22.5 / 20);
+        letter-spacing: 4px;
+        text-align: center;
+        padding: 20px 0;
+
+        &:hover {
+            background-color: $font-main-color;
+            color: $color-white;
+        }
+
+        @include mq("sp") {
+            font-size: 18px;
+            line-height: (22.5 / 18);
+            letter-spacing: 3.6px;
+            padding: 16px 0;
+        }
+    }
+
+    @include mq("sp") {
+        width: 268px;
+        height: 54px;
+    }
+}
+
+.util-btn--black {
+    border-color: $color-white;
+
+    a {
+        background-color: transparent;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-white;
+            color: $font-main-color;
+        }
+    }
+}
+
+.util-btn--position {
+    margin: 40px auto 0;
+}
+
+.results-btn {
+    width: 289px;
+
+    @include mq("sp") {
+        width: 316px;
+        margin: 24px auto 0;
+    }
+}

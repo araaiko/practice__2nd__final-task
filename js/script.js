@@ -1,4 +1,4 @@
-// ドロワーメニュー コンテンツごとスライド
+// ドロワーメニュー （コンテンツごとスライド）
 $('.drawer-btn').on('click', function () {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
@@ -28,7 +28,7 @@ $('.overlay').on('click', function () {
     }
 });
 
-//メニューを押すとドロワーが閉じる
+// ドロワーメニュー （メニューを押すとドロワーが閉じる）
 $('a[href^="#"]').on('click', function () {
     $('.overlay').removeClass('open');
     $('.drawer-btn').removeClass('active');
@@ -39,3 +39,24 @@ $('a[href^="#"]').on('click', function () {
     $('.close-btn').hide();
 
 })
+
+// Swiper
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 'auto', // CSSでスライド（.swiper-slide）の幅を調整しているので、ここは'auto'でOK
+    spaceBetween: 20, // 任意のmarginを指定
+    breakpoints: {
+        768: {
+            spaceBetween: 40,
+        }
+    },
+    loop: true, // trueにすれば、スライドの最初と最後が繋がるだけでなく、ページネーションの数もスライドの数と一致する
+    freeModeSticky: true, // スライドに合わせてスクロールがストップしてくれる
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+    autoplay: {
+        delay: 5000,
+    },
+});
