@@ -239,6 +239,67 @@ Access
 Comments
 ====================== */
 
+.comments {
+	padding-bottom: 120px;
+	position: relative;
+}
+
+.comments::before {
+	background-color: #3e3e3e;
+	bottom: 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	max-height: 79.67%;
+	max-width: 980px;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+.comments__flex {
+	align-items: center;
+	display: flex;
+}
+
+.comments__left {
+	background-color: #ffffff;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+	padding: 120px 60px;
+	width: 55.5%;
+}
+
+.comments__body {
+	display: flex;
+	margin-top: 60px;
+}
+
+.comments__img {
+	width: 132px;
+}
+
+.comments__text {
+	line-height: 1.5;
+	width: calc(100% - 132px);
+}
+
+.comments__right {
+	width: 44.5%;
+}
+
+.comments__right-img {
+	padding-top: 83.14607%;
+	position: relative;
+}
+
+.comments__right-img img {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
 /*=======================
 Contact Us
 ====================== */
@@ -441,6 +502,80 @@ Price
 Q&A
 ====================== */
 
+.faqs {
+	background: transparent url("../img/qa-bg.png") no-repeat center center/cover;
+	background-attachment: fixed;
+	padding-bottom: 120px;
+	padding-top: 60px;
+	position: relative;
+}
+
+.faqs__items {
+	margin-left: auto;
+	margin-top: 60px;
+	max-width: 612px;
+	width: 100%;
+}
+
+.faqs__item {
+	background-color: #ffffff;
+	border-radius: 4px;
+	padding: 20px 16px 16px;
+}
+
+.faqs__item:nth-child(n + 2) {
+	margin-top: 32px;
+}
+
+.accordion__head {
+	font-weight: bold;
+	letter-spacing: 0.4px;
+	line-height: 1.5;
+	padding-left: 40px;
+	padding-right: 17px;
+	position: relative;
+}
+
+.accordion__head::before {
+	background-color: #3b69ff;
+	border-radius: 999px;
+	color: #ffffff;
+	content: "Q";
+	display: inline-block;
+	font-weight: 600;
+	height: 24px;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 24px;
+}
+
+.accordion__head::after {
+	background: transparent url("../img/plus.svg") no-repeat center center/contain;
+	content: "";
+	height: 17px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 17px;
+}
+
+.is-open::after {
+	background-image: url("../img/minus.svg");
+}
+
+.accordion_body {
+	background-color: #3b69ff33;
+	border-radius: 4px;
+	display: none;
+	line-height: 1.5;
+	margin-top: 16px;
+	padding: 16px;
+}
+
 /*=======================
 Results
 ====================== */
@@ -634,11 +769,35 @@ To top トップへ戻るボタン
 
 }
 
+@media screen and (max-width: 1023px) {
+
+.comments__flex {
+	display: block;
+}
+
+.comments__left {
+	width: 100%;
+}
+
+.comments__right {
+	display: none;
+}
+
+.faqs {
+	background-size: auto 100%;
+}
+
+}
+
 @media screen and (max-width: 767px) {
 
 .section--sp {
 	padding-bottom: 60px;
 	padding-top: 40px;
+}
+
+.section--sp--padding-bottom {
+	padding-bottom: 60px;
 }
 
 .is-pc {
@@ -691,6 +850,42 @@ To top トップへ戻るボタン
 .util-title {
 	font-size: 30px;
 	line-height: 1.23333;
+}
+
+.comments::before {
+	max-height: 87.91%;
+}
+
+.comments__flex {
+	display: block;
+}
+
+.comments__left {
+	padding: 40px 20px;
+	width: 100%;
+}
+
+.comments__body {
+	margin-top: 40px;
+}
+
+.comments__img {
+	width: 80px;
+}
+
+.comments__img img {
+	height: 60px;
+	width: 60px;
+}
+
+.comments__text {
+	font-size: 14px;
+	line-height: 1.42857;
+	width: calc(100% - 80px);
+}
+
+.comments__right {
+	display: none;
 }
 
 .header__sp {
@@ -863,6 +1058,19 @@ nav li:nth-child(n + 2) {
 
 .price__box table tr td {
 	padding-left: 20px;
+}
+
+.faqs__items {
+	margin-top: 40px;
+}
+
+.faqs__item:nth-child(n + 2) {
+	margin-top: 24px;
+}
+
+.accordion_body {
+	font-size: 14px;
+	line-height: 1.42857;
 }
 
 .results__box {

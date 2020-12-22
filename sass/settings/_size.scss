@@ -8,6 +8,7 @@ $layout-width-inner: 1200px;
 $breakpoints: (
     //キー  値
     "sp": "screen and (max-width: 767px)",
+    "tab-only": "screen and (max-width: 1023px)",
     "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
     "pc": "screen and (min-width: #{$layout-width-inner})"
 ) !default;
