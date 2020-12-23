@@ -102,3 +102,15 @@ button
         margin: 24px auto 0;
     }
 }
+
+.access-btn {
+    width: 100%;
+    max-width: 314px;
+    margin-top: 32px;
+
+    @include mq("sp") {
+        width: 100%;
+        max-width: 339px;
+        margin: 24px auto 0;
+    }
+}

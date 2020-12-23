@@ -14,12 +14,12 @@ Comments
         z-index: -1;
         width: 100%;
         max-width: 980px;
-        height: 100%;
-        max-height: 79.67%;
+        // height: 100%;
+        height: 79.67%;
         background-color: #3e3e3e;
 
-        @include mq('sp') {
-            max-height: 87.91%;
+        @include mq("sp") {
+            height: 87.91%;
         }
     }
 }
@@ -28,11 +28,11 @@ Comments
     display: flex;
     align-items: center;
 
-    @include mq('tab-only') {
+    @include mq("tab-only") {
         display: block;
     }
 
-    @include mq('sp') {
+    @include mq("sp") {
         display: block;
     }
 }
@@ -43,11 +43,11 @@ Comments
     background-color: $color-white;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
 
-    @include mq('tab-only') {
+    @include mq("tab-only") {
         width: 100%;
     }
 
-    @include mq('sp') {
+    @include mq("sp") {
         width: 100%;
         padding: 40px 20px;
     }
@@ -57,7 +57,7 @@ Comments
     margin-top: 60px;
     display: flex;
 
-    @include mq('sp') {
+    @include mq("sp") {
         margin-top: 40px;
     }
 }
@@ -65,7 +65,7 @@ Comments
 .comments__img {
     width: 132px;
 
-    @include mq('sp') {
+    @include mq("sp") {
         width: 80px;
 
         img {
@@ -79,7 +79,7 @@ Comments
     width: calc(100% - 132px);
     line-height: (24 / 16);
 
-    @include mq('sp') {
+    @include mq("sp") {
         width: calc(100% - 80px);
         font-size: 14px;
         line-height: (20 / 14);
@@ -89,11 +89,11 @@ Comments
 .comments__right {
     width: 44.5%;
 
-    @include mq('tab-only') {
+    @include mq("tab-only") {
         display: none;
     }
 
-    @include mq('sp') {
+    @include mq("sp") {
         display: none;
     }
 }

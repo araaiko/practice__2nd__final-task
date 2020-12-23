@@ -1,3 +1,93 @@
 /*=======================
 Access
 ====================== */
+.access {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        max-width: 980px;
+        height: 66.32%;
+        background-color: #3e3e3e;
+
+        @include mq('tab-only') {
+            height: 100%;
+            max-width: 100%;
+        }
+
+        @include mq("sp") {
+            height: 100%;
+        }
+    }
+}
+
+.access__flex {
+    display: flex;
+    flex-wrap: wrap;
+    // align-content: flex-start;
+    align-items: flex-start;
+}
+
+.access__left {
+    width: 39.5%;
+    padding-left: 60px;
+
+    @include mq('tab-only') {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include mq("sp") {
+        padding-left: 0;
+        width: 100%;
+    }
+}
+
+.access__address {
+    margin-top: 60px;
+    color: $color-white;
+    line-height: (24 / 16);
+
+    @include mq("sp") {
+        margin-top: 40px;
+        font-size: 14px;
+        line-height: (20 / 14);
+    }
+}
+
+.access__right {
+    width: 60.5%;
+
+    @include mq('sp') {
+        margin-top: 24px;
+        width: 100%;
+    }
+}
+
+.access__map {
+    padding-top: 520px / 726px * 100%;
+    width: 100%;
+    position: relative;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+
+.access__btn {
+    width: auto;
+    height: auto;
+    align-self: flex-start;
+}

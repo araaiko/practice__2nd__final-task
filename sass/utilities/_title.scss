@@ -24,5 +24,7 @@ Section Title
 }
 
 .util-title--position-sp {
-    text-align: center;
+    @include mq("sp") {
+        text-align: center;
+    }
 }
