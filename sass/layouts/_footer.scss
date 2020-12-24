@@ -1,3 +1,119 @@
 /*=======================
 Footer
 ====================== */
+.footer {
+    padding: 60px 160px;
+    background-color: $font-main-color;
+
+    @include mq('tab-only') {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    @include mq("sp") {
+        padding: 60px;
+    }
+}
+
+.footer__flex {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq("sp") {
+        display: block;
+    }
+}
+
+.footer__left {
+}
+
+.footer__nav-items {
+}
+
+.footer__nav-item {
+    a {
+        display: inline-block;
+        color: #e3e3e3;
+        padding-top: 14px;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &.sns-icon {
+            padding-top: 0;
+
+            &:nth-child(2) {
+                margin-left: 32px;
+
+                @include mq("sp") {
+                    margin-left: 50px;
+                }
+            }
+        }
+
+        @include mq("sp") {
+            font-size: 14px;
+            letter-spacing: 0.35px;
+        }
+    }
+
+    &:nth-child(2) {
+        margin-top: 26px;
+    }
+
+    &:nth-child(n + 3) {
+        margin-top: 10px;
+    }
+
+    @include mq("sp") {
+        text-align: center;
+    }
+}
+
+.sns-icon-original {
+    font-size: 36px;
+    color: #e3e3e3;
+    opacity: 0.6;
+}
+
+.footer__right {
+    @include mq('sp') {
+        margin-top: 40px;
+    }
+}
+
+.footer__brand {
+    a {
+        display: inline-block;
+        color: #e3e3e3;
+        font-size: 40px;
+        font-weight: 700;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        @include mq('sp') {
+            font-size: 32px;
+        }
+    }
+
+    @include mq('sp') {
+        text-align: center;
+    }
+}
+
+.footer__copyright {
+    color: #e3e3e3;
+    margin-top: 10px;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    opacity: 0.6;
+    text-align: right;
+
+    @include mq('sp') {
+        text-align: center;
+        margin-top: 12px;
+    }
+}

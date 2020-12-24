@@ -30,13 +30,13 @@
         <div class="inner">
             <div class="header__navgation">
                 <ul class="header__nav">
-                    <li class="header__nav-item"><a href="#news">News</a></li>
-                    <li class="header__nav-item"><a href="#service">Service</a></li>
-                    <li class="header__nav-item"><a href="#results">Results</a></li>
-                    <li class="header__nav-item"><a href="#price">Price</a></li>
-                    <li class="header__nav-item"><a href="#comments">Comments</a></li>
-                    <li class="header__nav-item"><a href="#faqs">FAQs</a></li>
-                    <li class="header__nav-item"><a href="#contact">Contact</a></li>
+                    <li class="header__nav-item"><a id="js-news" href="#news">News</a></li>
+                    <li class="header__nav-item"><a id="js-service" href="#service">Service</a></li>
+                    <li class="header__nav-item"><a id="js-results" href="#results">Results</a></li>
+                    <li class="header__nav-item"><a id="js-price" href="#price">Price</a></li>
+                    <li class="header__nav-item"><a id="js-comments" href="#comments">Comments</a></li>
+                    <li class="header__nav-item"><a id="js-faqs" href="#faqs">FAQs</a></li>
+                    <li class="header__nav-item"><a id="js-contact" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -70,7 +70,7 @@
 
     <main>
         <!--==  Top  ==-->
-        <section id="top" class="top">
+        <section id="top" class="top position-now">
             <div class="inner">
                 <div class="top__text">
                     <h1 class="top__title">詩が生れて、画が出来る。<br>とかくに人の世は住みにくい。</h1>
@@ -80,7 +80,7 @@
             </div>
         </section>
         <!--==  News  ==-->
-        <section id="news" class="news section--sp">
+        <section id="news" class="news section--sp position-now">
             <div class="inner">
                 <div class="news__box">
                     <h2 class="util-title">News</h2>
@@ -124,7 +124,7 @@
             </div>
         </section>
         <!--==  Service  ==-->
-        <section id="service" class="service section--sp">
+        <section id="service" class="service section--sp position-now">
             <div class="inner">
                 <h2 class="util-title util-title--color">Service</h2>
                 <ul class="service__items">
@@ -150,7 +150,7 @@
             </div>
         </section>
         <!--==  Results  ==-->
-        <section id="results" class="results section--sp">
+        <section id="results" class="results section--sp position-now">
             <div class="inner inner--width">
                 <div class="results__box">
                     <h2 class="util-title util-title--color util-title--position util-title--position-sp">Results</h2>
@@ -225,7 +225,7 @@
             </div>
         </section>
         <!--==  Price  ==-->
-        <section id="price" class="price section--sp">
+        <section id="price" class="price section--sp position-now">
             <div class="inner">
                 <h2 class="util-title">Price</h2>
                 <div class="price__box">
@@ -248,7 +248,7 @@
             </div>
         </section>
         <!--==  Comments  ==-->
-        <section id="comments" class="comments section--sp--padding-bottom">
+        <section id="comments" class="comments section--sp--padding-bottom position-now">
             <div class="inner">
                 <div class="comments__flex">
                     <div class="comments__left">
@@ -275,7 +275,7 @@
             </div>
         </section>
         <!--==  Q&A  ==-->
-        <section id="faqs" class="faqs section--sp">
+        <section id="faqs" class="faqs section--sp position-now">
             <div class="inner">
                 <h2 class="util-title">Q&A</h2>
                 <div class="faqs__items">
@@ -331,7 +331,7 @@
             </div>
         </section>
         <!--==  Access  ==-->
-        <section id="access" class="access section--sp">
+        <section id="access" class="access section--sp position-now">
             <div class="inner">
                 <div class="access__flex">
                     <div class="access__left">
@@ -350,14 +350,16 @@
             </div>
         </section>
         <!--==  Contact Us  ==-->
-        <section id="contact" class="contact section--sp">
+        <section id="contact" class="contact section--sp position-now">
             <div class="inner">
                 <div class="contact__box">
                     <div class="contact__titles">
-                        <h2 class="util-title">Contact Us</h2>
+                        <h2 class="util-title util-title--color">Contact Us</h2>
                         <div class="contact__sub-title">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</div>
                     </div>
-                    <form id="js-form" action="" method="POST" class="contact__form">
+                    <form id="js-form"
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScnHMpjgwQ30YUXvH_nXu7aLu9X2Hkf5aXojcki7_EWCHXjew/formResponse"
+                        method="POST" class="contact__form">
                         <dl class="contact__form-items">
                             <!-- セレクトボックス（お問い合わせ種別） -->
                             <div class="contact__item">
@@ -365,11 +367,11 @@
                                     <label for="select">お問い合わせ種別</label>
                                 </dt>
                                 <dd class="contact__select">
-                                    <select id="select" name="" class="contact__select-arrow">
-                                        <option value="#">選択してください</option>
-                                        <option value="#">−−−</option>
-                                        <option value="#">・・・</option>
-                                        <option value="#">▲▲▲</option>
+                                    <select id="select" name="entry.596070456">
+                                        <option value="選択してください">選択してください</option>
+                                        <option value="−−−">−−−</option>
+                                        <option value="・・・">・・・</option>
+                                        <option value="▲▲▲">▲▲▲</option>
                                     </select>
                                 </dd>
                             </div>
@@ -379,7 +381,7 @@
                                     <label for="name" class="required-mark">氏名</label>
                                 </dt>
                                 <dd class="contact__input-name">
-                                    <input type="text" id="name" name="" placeholder="氏名" required>
+                                    <input type="text" id="name" name="entry.1672009915" placeholder="氏名" required>
                                 </dd>
                             </div>
                             <!-- フリガナ -->
@@ -388,7 +390,7 @@
                                     <label for="name-2" class="required-mark">フリガナ</label>
                                 </dt>
                                 <dd class="contact__input-name-2">
-                                    <input type="text" id="name-2" name="" placeholder="フリガナ" required>
+                                    <input type="text" id="name-2" name="entry.1317382001" placeholder="フリガナ" required>
                                 </dd>
                             </div>
                             <!-- メールアドレス -->
@@ -397,7 +399,8 @@
                                     <label for="mail">メールアドレス</label>
                                 </dt>
                                 <dd class="contact__input-mail">
-                                    <input type="email" id="mail" name="" placeholder="sample@gmail.com">
+                                    <input type="email" id="mail" name="entry.1602874992"
+                                        placeholder="sample@gmail.com">
                                 </dd>
                             </div>
                             <!-- ラジオボタン（性別）  -->
@@ -406,24 +409,26 @@
                                     <label for="gender">性別</label>
                                 </dt>
                                 <dd class="contact__input-radio">
-                                    <label><input type="radio" name="gender" value="男性"><span>男性</span></label>
-                                    <label><input type="radio" name="gender" value="女性"><span>女性</span></label>
+                                    <label><input type="radio" name="entry.1110279299"
+                                            value="男性"><span>男性</span></label>
+                                    <label><input type="radio" name="entry.1110279299"
+                                            value="女性"><span>女性</span></label>
                                 </dd>
                             </div>
                             <!-- テキストエリア（メッセージ） -->
-                            <div class="contact__item">
+                            <div class="contact__item display-block">
                                 <dt class="contact__label">
                                     <label for="taxtarea">メッセージ</label>
                                 </dt>
                                 <dd class="contact__textarea">
-                                    <textarea name="" id="textarea"></textarea>
+                                    <textarea name="entry.35160417" id="textarea"></textarea>
                                 </dd>
                             </div>
                         </dl>
                         <!-- チェックボタン -->
                         <div class="contact__check">
-                            <label><input type="checkbox" name=""
-                                    value="個人情報保護方針に同意する"><span>個人情報保護方針に同意する</span></label>
+                            <label><input type="checkbox" name="entry.276419619"
+                                    value="個人情報保護方針に同意します"><span>個人情報保護方針に同意する</span></label>
                         </div>
                         <!-- 送信ボタン -->
                         <input id="js-submit" type="submit" class="contact-btn" value="送信する" disabled>
@@ -444,9 +449,10 @@
                 <div class="footer__left">
                     <ul class="footer__nav-items">
                         <li class="footer__nav-item">
-                            <a href="#" class="footer__nav-item-link sns-icon"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="footer__nav-item-link sns-icon"><i
-                                    class="fab fa-facebook-square"></i></a>
+                                    class="fab fa-twitter sns-icon-original"></i></a>
+                            <a href="#" class="footer__nav-item-link sns-icon"><i
+                                    class="fab fa-facebook-square sns-icon-original"></i></a>
                         </li>
                         <li class="footer__nav-item"><a href="#" class="footer__nav-item-link">サイトマップ</a>
                         </li>

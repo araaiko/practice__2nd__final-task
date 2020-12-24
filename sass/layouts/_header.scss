@@ -41,6 +41,12 @@ Header (PC)
                 width: 100%;
             }
         }
+
+        &.current {
+            &::after {
+                width: 100%;
+            }
+        }
     }
 }
 

@@ -1,3 +1,435 @@
 /*=======================
 Contact Us
 ====================== */
+.contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: transparent url("../img/contact-bg.png") no-repeat center center / cover;
+}
+
+.contact__box {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: $color-white;
+}
+
+.contact__titles {
+    width: 100%;
+    max-width: 960px;
+    height: 196px;
+    border-radius: 12px 12px 0 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: transparent url("../img/contact1.png") no-repeat center center / cover;
+
+    @include mq("sp") {
+        padding: 40px 16px;
+        height: 163px;
+    }
+}
+
+.contact__sub-title {
+    color: $color-white;
+    text-align: center;
+    line-height: (24 / 16);
+    margin-top: 16px;
+
+    @include mq("sp") {
+        font-size: 14px;
+        line-height: (20 / 14);
+        margin-top: 12px;
+        text-align: left;
+    }
+}
+
+.contact__form {
+    padding: 60px 120px;
+
+    @include mq("sp") {
+        padding: 40px 12px;
+    }
+}
+
+/* 以下からcontactの各パーツについて */
+.contact__item {
+    display: flex;
+    align-items: center;
+
+    &:nth-child(n + 2) {
+        margin-top: 32px;
+    }
+
+    dt {
+        width: 188px;
+    }
+
+    @include mq("sp") {
+        display: block;
+
+        dd {
+            margin-top: 16px;
+        }
+    }
+}
+
+.contact__input-name,
+.contact__input-name-2,
+.contact__input-mail,
+.contact__input-radio {
+    width: calc(100% - 188px);
+
+    @include mq("sp") {
+        width: 100%;
+    }
+}
+
+.display-block {
+    display: block;
+}
+
+.contact__label {
+    label {
+        font-weight: bold;
+    }
+}
+
+/* 「必須」のラベル */
+.required-mark {
+    padding-right: 52px;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "必須";
+        width: 40px;
+        height: 16px;
+        background-color: #ff4646;
+        border-radius: 2px;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: $color-white;
+    }
+}
+
+/* select */
+.contact__select {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-80%) rotate(45deg);
+        right: 12px;
+        width: 7px;
+        height: 7px;
+        border-bottom: 2px solid $font-main-color;
+        border-right: 2px solid $font-main-color;
+    }
+
+    select {
+        padding-left: 12px;
+        appearance: none;
+        font-size: $fz-base;
+        line-height: 16px;
+        background-color: transparent;
+        background-image: none;
+        border-radius: 0;
+        border: 1px solid #707070;
+        color: inherit;
+        font-family: inherit;
+        width: 178px;
+        height: 40px;
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        &:focus {
+            box-shadow: 0 0 5px 0 rgba(73, 115, 255, 0.5);
+            outline: none;
+        }
+
+        &:hover {
+            box-shadow: 0 0 5px 0 rgba(73, 115, 255, 0.5);
+            outline: none;
+        }
+
+        @include mq("sp") {
+            width: 100%;
+        }
+    }
+}
+
+/* 氏名・メールアドレス共通箇所 */
+input[type="text"],
+input[type="email"] {
+    padding-left: 7px;
+    font-size: $fz-base;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #707070;
+    color: inherit;
+    font-family: inherit;
+    height: 32px;
+    width: 100%;
+    line-height: 32px;
+
+    &::placeholder {
+        opacity: 0.5;
+    }
+
+    &:focus {
+        border-bottom: 1px solid #4973ff;
+        box-shadow: 0 5px 4px -4px rgba(73, 115, 255, 0.5);
+        outline: none;
+    }
+
+    &:hover {
+        border-bottom: 1px solid #4973ff;
+        box-shadow: 0 5px 4px -4px rgba(73, 115, 255, 0.5);
+    }
+}
+
+/* radio */
+.contact__input-radio {
+    label {
+        position: relative;
+        &:last-child {
+            margin-left: 40px;
+        }
+    }
+}
+
+input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    + span {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 0 0 20px;
+
+        position: relative;
+
+        /* 擬似要素beforeとafterを共通でセット */
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            display: block;
+            background-color: transparent;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #707070;
+            border-radius: 999px;
+        }
+
+        &::after {
+            width: 6px;
+            height: 6px;
+            background-color: #3b69ff;
+            border-radius: 999px;
+            left: 4px;
+            transition: opacity 0.3s ease 0s;
+            opacity: 0;
+        }
+    }
+
+    /* 非表示にしたデフォルトのラジオボタンにチェックが入ると、オリジナルボタンのチェックも透明を解除して表示する */
+    &:checked {
+        + span {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &:focus {
+        + span {
+            &::before {
+                border: 1px solid #3b69ff;
+                box-shadow: 0 0 6px rgba(73, 115, 255, 0.2);
+            }
+        }
+    }
+
+    &:hover {
+        + span {
+            &::before {
+                border: 1px solid #3b69ff;
+                box-shadow: 0 0 6px 0 rgba(73, 115, 255, 0.2);
+            }
+        }
+    }
+
+    &:active {
+        + span {
+            &::before {
+                border: 1px solid #3b69ff;
+                background-color: rgba(73, 115, 255, 0.2);
+            }
+        }
+    }
+}
+
+/* textarea */
+.contact__textarea {
+    margin-top: 8px;
+    width: 100%;
+
+    textarea {
+        width: 100%;
+        max-width: 720px;
+        height: 200px;
+        border: 1px solid #707070;
+        border-radius: 0;
+        padding: 10px;
+
+        &:focus {
+            border: 1px solid #4973ff;
+            box-shadow: 0 0 8px 0 rgba(73, 115, 255, 0.5);
+            outline: none;
+        }
+
+        &:hover {
+            border: 1px solid #4973ff;
+            box-shadow: 0 0 8px 0 rgba(73, 115, 255, 0.5);
+        }
+
+        @include mq("sp") {
+            height: 160px;
+        }
+    }
+}
+
+/* checkbox */
+.contact__check {
+    margin-top: 40px;
+
+    label {
+        position: relative;
+    }
+
+    @include mq("sp") {
+        margin-top: 32px;
+    }
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    /* オリジナルボタンを設置するため、paddingでテキストの左側にスペースを確保 */
+    + span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        padding: 0 0 0 40px;
+        font-size: 18px;
+        font-weight: bold;
+
+        /* 擬似要素beforeとafterを共通でセット */
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* beforeをラジオボタンの枠として利用するため、デザインを適用する */
+        &::before {
+            width: 20px;
+            height: 20px;
+            display: block;
+            border: 1px solid #707070;
+            background-color: transparent;
+            left: 0;
+        }
+
+        /* afterは枠の中のチェックマークとして利用するため、デザインを適用する
+				   デフォルトのチェックマークはopacity:0で透明にしておく*/
+        &::after {
+            width: 7px;
+            height: 15px;
+            border-right: 2px solid #3b69ff;
+            border-bottom: 2px solid #3b69ff;
+            transform: rotate(45deg);
+            left: 7px;
+            top: -3px;
+            opacity: 0;
+            transition: opacity 0.3s ease 0s;
+        }
+    }
+
+    /* 非表示にしたデフォルトのラジオボタンにチェックが入ると、オリジナルボタンのチェックも透明を解除して表示する */
+    &:checked {
+        + span {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &:focus {
+        + span {
+            &::before {
+                border-bottom: 1px solid #4973ff;
+                box-shadow: 0 0 5px 0 rgba(73, 115, 255, 0.2);
+            }
+        }
+    }
+
+    &:hover {
+        + span {
+            &::before {
+                border: 1px solid #4973ff;
+                box-shadow: 0 0 5px 0 rgba(73, 115, 255, 0.2);
+            }
+        }
+    }
+
+    &:active {
+        + span {
+            &::before {
+                border: 1px solid #4973ff;
+                background-color: rgba(73, 115, 255, 0.2);
+            }
+        }
+    }
+}
+
+/* 送信ボタンは_btn.scssにて */
+
+/* 送信後に表示する文章について */
+.contact-message {
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 60px;
+    display: none;
+
+    &.-error {
+        color: #f00;
+    }
+}
