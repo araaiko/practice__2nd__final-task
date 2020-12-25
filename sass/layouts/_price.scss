@@ -3,7 +3,11 @@ Price
 ====================== */
 .price {
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 115px;
+
+    @include mq('sp') {
+        padding-bottom: 57px;
+    }
 }
 
 .price__box {
@@ -40,6 +44,10 @@ Price
                 color: $color-white;
                 padding: 16px 0;
                 border-top: 1px solid $color-white;
+
+                @include mq('sp') {
+                    padding: 15px 0;
+                }
             }
 
             .th-top {
@@ -55,6 +63,7 @@ Price
 
                 @include mq('sp') {
                     padding-left: 20px;
+                    width: 67%;
                 }
             }
         }
@@ -63,6 +72,10 @@ Price
     p {
         font-size: 12px;
         line-height: (20 / 12);
-        margin-top: 12px;
+        margin-top: 7px;
+
+        @include mq('sp') {
+            margin-top: 5px;
+        }
     }
 }

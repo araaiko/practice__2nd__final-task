@@ -5,6 +5,11 @@ Contact Us
     padding-top: 60px;
     padding-bottom: 60px;
     background: transparent url("../img/contact-bg.png") no-repeat center center / cover;
+
+    @include mq("sp") {
+        padding-top: 41px;
+        padding-bottom: 40px;
+    }
 }
 
 .contact__box {
@@ -25,7 +30,7 @@ Contact Us
     background: transparent url("../img/contact1.png") no-repeat center center / cover;
 
     @include mq("sp") {
-        padding: 40px 16px;
+        padding: 43px 16px 40px;
         height: 163px;
     }
 }
@@ -34,12 +39,12 @@ Contact Us
     color: $color-white;
     text-align: center;
     line-height: (24 / 16);
-    margin-top: 16px;
+    margin-top: 13px;
 
     @include mq("sp") {
         font-size: 14px;
         line-height: (20 / 14);
-        margin-top: 12px;
+        margin-top: 10px;
         text-align: left;
     }
 }
@@ -48,7 +53,7 @@ Contact Us
     padding: 60px 120px;
 
     @include mq("sp") {
-        padding: 40px 12px;
+        padding: 43px 12px 40px;
     }
 }
 
@@ -67,10 +72,6 @@ Contact Us
 
     @include mq("sp") {
         display: block;
-
-        dd {
-            margin-top: 16px;
-        }
     }
 }
 
@@ -82,6 +83,37 @@ Contact Us
 
     @include mq("sp") {
         width: 100%;
+    }
+}
+
+.contact__select {
+    @include mq("sp") {
+        margin-top: 14px;
+    }
+}
+
+.contact__input-name {
+    @include mq("sp") {
+        margin-top: 2px;
+    }
+}
+.contact__input-name-2,
+.contact__input-mail {
+    @include mq("sp") {
+        margin-top: 3px;
+    }
+}
+
+.contact__input-mail {
+    @include mq("sp") {
+        font-size: 12px;
+    }
+}
+
+.contact__input-radio,
+.contact__textarea {
+    @include mq("sp") {
+        margin-top: 16px;
     }
 }
 
@@ -100,6 +132,10 @@ Contact Us
     padding-right: 52px;
     position: relative;
 
+    @include mq("sp") {
+        padding-right: 60px;
+    }
+
     &::after {
         position: absolute;
         right: 0;
@@ -115,6 +151,19 @@ Contact Us
         font-weight: bold;
         text-align: center;
         color: $color-white;
+
+        @include mq("sp") {
+            top: 48%;
+        }
+    }
+}
+
+/* IE表示崩れ対策 「必須」のラベル */
+@media all and (-ms-high-contrast: none) {
+    .required-mark {
+        &::after {
+            padding-top: 4px;
+        }
     }
 }
 
@@ -125,9 +174,9 @@ Contact Us
     &::after {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 47%;
         transform: translateY(-80%) rotate(45deg);
-        right: 12px;
+        right: 16px;
         width: 7px;
         height: 7px;
         border-bottom: 2px solid $font-main-color;
@@ -164,6 +213,7 @@ Contact Us
 
         @include mq("sp") {
             width: 100%;
+            font-size: 14px;
         }
     }
 }
@@ -171,7 +221,7 @@ Contact Us
 /* 氏名・メールアドレス共通箇所 */
 input[type="text"],
 input[type="email"] {
-    padding-left: 7px;
+    padding-left: 12px;
     font-size: $fz-base;
     appearance: none;
     background-color: transparent;
@@ -184,6 +234,12 @@ input[type="email"] {
     height: 32px;
     width: 100%;
     line-height: 32px;
+
+    @include mq("sp") {
+        font-size: 14px;
+        padding-left: 0;
+        padding-top: 9px;
+    }
 
     &::placeholder {
         opacity: 0.5;
@@ -201,12 +257,18 @@ input[type="email"] {
     }
 }
 
+input[type="email"] {
+    @include mq("sp") {
+        font-size: 12px;
+    }
+}
+
 /* radio */
 .contact__input-radio {
     label {
         position: relative;
         &:last-child {
-            margin-left: 40px;
+            margin-left: 36px;
         }
     }
 }
@@ -237,8 +299,8 @@ input[type="radio"] {
             display: block;
             background-color: transparent;
             left: 0;
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border: 1px solid #707070;
             border-radius: 999px;
         }
@@ -248,7 +310,7 @@ input[type="radio"] {
             height: 6px;
             background-color: #3b69ff;
             border-radius: 999px;
-            left: 4px;
+            left: 3px;
             transition: opacity 0.3s ease 0s;
             opacity: 0;
         }
@@ -323,14 +385,14 @@ input[type="radio"] {
 
 /* checkbox */
 .contact__check {
-    margin-top: 40px;
+    margin-top: 38px;
 
     label {
         position: relative;
     }
 
     @include mq("sp") {
-        margin-top: 32px;
+        margin-top: 30px;
     }
 }
 
@@ -349,6 +411,11 @@ input[type="checkbox"] {
         font-size: 18px;
         font-weight: bold;
 
+        @include mq("sp") {
+            font-size: 16px;
+            padding: 0 0 0 38px;
+        }
+
         /* 擬似要素beforeとafterを共通でセット */
         &::before,
         &::after {
@@ -360,12 +427,18 @@ input[type="checkbox"] {
 
         /* beforeをラジオボタンの枠として利用するため、デザインを適用する */
         &::before {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             display: block;
             border: 1px solid #707070;
             background-color: transparent;
             left: 0;
+            top: 8px;
+
+            @include mq("sp") {
+                width: 16px;
+                height: 16px;
+            }
         }
 
         /* afterは枠の中のチェックマークとして利用するため、デザインを適用する
@@ -376,7 +449,7 @@ input[type="checkbox"] {
             border-right: 2px solid #3b69ff;
             border-bottom: 2px solid #3b69ff;
             transform: rotate(45deg);
-            left: 7px;
+            left: 6px;
             top: -3px;
             opacity: 0;
             transition: opacity 0.3s ease 0s;

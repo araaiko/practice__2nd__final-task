@@ -7,8 +7,8 @@
     <!--==  IE時の表示崩れ防止metaタグ  ==-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="./favicon.ico">
-    <title></title>
-    <meta name="description" content="">
+    <title>Sample Corp.</title>
+    <meta name="description" content="Adobe XDで作成されたデザインカンプからコーディングをおこないました。">
     <!--==  Google Fonts  ==-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!--==  Swiper-css  ==-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
     <!--==  my css  ==-->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -119,7 +120,7 @@
                             </div>
                         </li>
                     </ul>
-                    <div class="util-btn util-btn--position"><a href="#">MORE</a></div>
+                    <div class="util-btn util-btn--position news-btn"><a href="#">MORE</a></div>
                 </div>
             </div>
         </section>
@@ -129,7 +130,8 @@
                 <h2 class="util-title util-title--color">Service</h2>
                 <ul class="service__items">
                     <li class="service__item">
-                        <div class="service__item-icon"><img src="./img/service1.svg" alt="WEB DESIGNのアイコン">
+                        <div class="service__item-icon service__item-icon-pc"><img src="./img/service1.svg"
+                                alt="WEB DESIGNのアイコン">
                         </div>
                         <div class="service__item-title service__item-title--margin-top">WEB<br>DESIGN</div>
                         <div class="service__item-text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</div>
@@ -150,7 +152,7 @@
             </div>
         </section>
         <!--==  Results  ==-->
-        <section id="results" class="results section--sp position-now">
+        <section id="results" class="results position-now">
             <div class="inner inner--width">
                 <div class="results__box">
                     <h2 class="util-title util-title--color util-title--position util-title--position-sp">Results</h2>
@@ -283,7 +285,7 @@
                         <dt class="accordion__head">
                             質問質問質問？
                         </dt>
-                        <dd class="accordion_body">
+                        <dd class="accordion__body">
                             回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
                         </dd>
                     </dl>
@@ -291,7 +293,14 @@
                         <dt class="accordion__head">
                             質問質問質問？<br>また、質問は質問質問？
                         </dt>
-                        <dd class="accordion_body">
+                        <dd class="accordion__body">
+                            回答回答回答回答回答回答回答回答回答回答回答</dd>
+                    </dl>
+                    <dl class="faqs__item accordion">
+                        <dt class="accordion__head">
+                            質問質問質問？
+                        </dt>
+                        <dd class="accordion__body">
                             回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
                         </dd>
                     </dl>
@@ -299,7 +308,7 @@
                         <dt class="accordion__head">
                             質問質問質問？
                         </dt>
-                        <dd class="accordion_body">
+                        <dd class="accordion__body">
                             回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
                         </dd>
                     </dl>
@@ -307,7 +316,7 @@
                         <dt class="accordion__head">
                             質問質問質問？
                         </dt>
-                        <dd class="accordion_body">
+                        <dd class="accordion__body">
                             回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
                         </dd>
                     </dl>
@@ -315,15 +324,7 @@
                         <dt class="accordion__head">
                             質問質問質問？
                         </dt>
-                        <dd class="accordion_body">
-                            回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
-                        </dd>
-                    </dl>
-                    <dl class="faqs__item accordion">
-                        <dt class="accordion__head">
-                            質問質問質問？
-                        </dt>
-                        <dd class="accordion_body">
+                        <dd class="accordion__body">
                             回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
                         </dd>
                     </dl>
@@ -342,19 +343,19 @@
                     <div class="access__right">
                         <div class="access__map"><iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.417452132055!2d139.7270506797036!3d35.66042410436766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b770913970d%3A0xccc3467fcb15b353!2zR29vZ2xl5ZCI5ZCM5Lya56S-44O75YWt5pys5pyo44Kq44OV44Kj44K5!5e0!3m2!1sja!2sjp!4v1608631747678!5m2!1sja!2sjp"
-                                width="726" height="520" frameborder="0" allowfullscreen="" aria-hidden="false"
-                                tabindex="0"></iframe></div>
+                                width="726" height="520" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="util-btn util-btn--black access-btn is-sp"><a href="#">Google Maps</a></div>
             </div>
         </section>
         <!--==  Contact Us  ==-->
-        <section id="contact" class="contact section--sp position-now">
+        <section id="contact" class="contact position-now">
             <div class="inner">
                 <div class="contact__box">
                     <div class="contact__titles">
-                        <h2 class="util-title util-title--color">Contact Us</h2>
+                        <h2 class="util-title util-title--color contact__title">Contact Us</h2>
                         <div class="contact__sub-title">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</div>
                     </div>
                     <form id="js-form"
@@ -406,7 +407,7 @@
                             <!-- ラジオボタン（性別）  -->
                             <div class="contact__item">
                                 <dt class="contact__label">
-                                    <label for="gender">性別</label>
+                                    <label>性別</label>
                                 </dt>
                                 <dd class="contact__input-radio">
                                     <label><input type="radio" name="entry.1110279299"
@@ -418,7 +419,7 @@
                             <!-- テキストエリア（メッセージ） -->
                             <div class="contact__item display-block">
                                 <dt class="contact__label">
-                                    <label for="taxtarea">メッセージ</label>
+                                    <label for="textarea">メッセージ</label>
                                 </dt>
                                 <dd class="contact__textarea">
                                     <textarea name="entry.35160417" id="textarea"></textarea>
@@ -475,7 +476,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <!--==  Swiper  ==-->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
     <!--==  my js  ==-->
     <script src="./js/script.js"></script>
 </body>

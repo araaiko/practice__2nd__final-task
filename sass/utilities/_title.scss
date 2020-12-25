@@ -28,3 +28,11 @@ Section Title
         text-align: center;
     }
 }
+
+.contact__title {
+    padding-left: 4px;
+
+    @include mq('sp') {
+        padding-left: 0;
+    }
+}

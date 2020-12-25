@@ -46,10 +46,10 @@ $('a[href^="#"]').on('click', function () {
 // Swiper
 var swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto', // CSSでスライド（.swiper-slide）の幅を調整しているので、ここは'auto'でOK
-    spaceBetween: 20, // 任意のmarginを指定
-    breakpoints: {
-        768: {
-            spaceBetween: 40,
+    spaceBetween: 40, // 任意のmarginを指定
+    breakpoints: { 
+        767: {
+            spaceBetween: 20, // 767px以下の時を書く
         }
     },
     loop: true, // trueにすれば、スライドの最初と最後が繋がるだけでなく、ページネーションの数もスライドの数と一致する
@@ -65,10 +65,9 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 // Q&A accordion
-jQuery('.accordion__head').click(function () {
-    jQuery(this).next().slideToggle();
-    jQuery(this).toggleClass('is-open');
-
+jQuery('.faqs__item').click(function () {
+    jQuery(this).find('.accordion__head').toggleClass('is-open');
+    jQuery(this).find('.accordion__body').slideToggle();
     return false;
 });
 

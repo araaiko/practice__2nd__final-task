@@ -1,12 +1,18 @@
 /*=======================
 Results
 ====================== */
+.results {
+    @include mq('sp') {
+        padding-bottom: 0;
+    }
+}
+
 .results__box {
     width: 100%;
     max-width: 1240px;
     margin-left: auto;
     background-color: $font-main-color;
-    padding: 60px 0 60px 60px;
+    padding: 62px 0 60px 60px;
 
     @include mq("sp") {
         padding: 40px 0;
@@ -16,11 +22,12 @@ Results
 .swiper-container {
     width: 100%;
     height: 100%;
-    padding-bottom: 60px; // ページネーションを外側に出すために記述
+    padding-bottom: 62px; // ページネーションを外側に出すために記述
 
     @include mq("sp") {
         padding-bottom: 44px;
         padding-left: 16px;
+        margin-top: -21px;
     }
 }
 
@@ -50,7 +57,7 @@ Results
 
 .swiper-slide-body {
     background-color: $color-white;
-    padding: 16px;
+    padding: 16px 16px 20px;
 
     @include mq("sp") {
         padding: 12px;
@@ -70,14 +77,14 @@ Results
 }
 
 .swiper-slide-text {
-    margin-top: 16px;
+    margin-top: 8px;
     line-height: (24 / 16);
 
     @include mq("sp") {
         font-size: 12px;
         line-height: (18 / 12);
         letter-spacing: 0.01px;
-        margin-top: 12px;
+        margin-top: 7px;
     }
 }
 
@@ -90,19 +97,35 @@ Results
 }
 
 .swiper-pagination-bullet {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     background-color: $color-white;
     border: 3px solid $font-main-color; // 二重丸を作る、内側の空白部分を表現
     opacity: 1;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 6px;
+    margin: 0 7px;
+
+    &:first-child {
+        margin-left: 1px;
+    }
+
+    @include mq("sp") {
+        margin: 0 11px 0 0;
+
+        &:nth-child(n + 2) {
+            margin-left: 3px;
+        }
+    }
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: 0;
+
+    @include mq("sp") {
+        left: 7px;
+    }
 }
 
 .swiper-pagination-bullet-active {

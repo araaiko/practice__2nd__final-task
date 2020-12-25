@@ -6,8 +6,8 @@ News
 
     @include mq("sp") {
          padding: 0 0 60px;
-         position: absolute;
-         top: 650px;
+        position: absolute;
+        top: 629px;
     }
 }
 
@@ -27,7 +27,7 @@ News
     position: relative;
     display: flex;
     align-items: center; // 子要素を上下中央配置にする
-    padding: 40px 0;
+    padding: 38px 0;
     border-bottom: 1px solid #cecdcd;
 
     @include mq("sp") {
@@ -49,9 +49,9 @@ News
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 16px;
+        right: 15px;
         background: transparent url("../img/news-arrow.svg") no-repeat center center / contain;
-        width: 11px;
+        width: 14px;
         height: 22px;
     }
 
@@ -80,17 +80,18 @@ News
 
 .news__item-datetime {
     font-size: 18px;
-    line-height: (26 / 18);
+    line-height: 1.8;
     letter-spacing: 0.45px;
 
     @include mq("sp") {
         font-size: 14px;
+        line-height: 1.7;
     }
 }
 
 .news__item-icon {
     font-size: 14px;
-    width: 117px;
+    width: 119px;
     height: 30px;
     border-radius: 50px;
     border: 2px solid #3b69ff;
@@ -103,16 +104,24 @@ News
         width: 81px;
         height: 20px;
         line-height: 16px;
-        margin-left: 24px;
+        margin-left: 22px;
+    }
+}
+
+/* IEの表示崩れ対策 */
+@media all and (-ms-high-contrast: none) {
+    .news__item-icon {
+        line-height: 30px;
     }
 }
 
 .news__item-body {
+    // font-family: $ff-ja;
     display: flex;
     align-items: center; // 子要素を上下中央配置にする
     width: calc(100% - (299px + 83px));
     font-size: 18px;
-    line-height: (28 / 18);
+    line-height: 1.55555;
     letter-spacing: 0.45px;
 
     @include mq("sp") {
@@ -120,7 +129,7 @@ News
         font-size: 14px;
         line-height: (20 / 14);
         letter-spacing: 0;
-        margin-top: 12px;
+        margin-top: 5px;
     }
 }
 

@@ -24,6 +24,7 @@ Header (PC)
     a {
         display: inline-block;
         position: relative;
+        letter-spacing: -0.4px;
 
         &::after {
             position: absolute;
@@ -154,6 +155,10 @@ Header (SP)
         z-index: 10;
         transform: translate(300px);
         transition: all 0.5s;
+
+        @include mq("sp") {
+            padding-top: 153px;
+        }
     }
 
     nav.open {
@@ -166,7 +171,7 @@ Header (SP)
         padding: 10px 0;
 
         &:nth-child(n + 2) {
-            margin-top: 12px;
+            margin-top: 16px;
         }
     }
 }

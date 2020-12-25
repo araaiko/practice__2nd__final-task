@@ -2,7 +2,7 @@
 Q&A
 ====================== */
 .faqs {
-    padding-top: 60px;
+    padding-top: 62px;
     padding-bottom: 120px;
     position: relative;
     background-attachment: fixed;
@@ -24,6 +24,10 @@ Q&A
     margin-left: auto;
     margin-top: 60px;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     @include mq("sp") {
         margin-top: 40px;
     }
@@ -31,14 +35,14 @@ Q&A
 
 .faqs__item {
     border-radius: 4px;
-    padding: 20px 16px 16px;
+    padding: 11px 16px 16px;
     background-color: $color-white;
 
     &:nth-child(n + 2) {
-        margin-top: 32px;
+        margin-top: 31px;
 
         @include mq("sp") {
-            margin-top: 24px;
+            margin-top: 21px;
         }
     }
 }
@@ -49,12 +53,13 @@ Q&A
     letter-spacing: 0.4px;
     padding-left: 40px;
     padding-right: 17px;
+    padding-top: 6px;
     position: relative;
 
     &::before {
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 55%;
         transform: translateY(-50%);
         content: "Q";
         display: inline-block;
@@ -71,7 +76,7 @@ Q&A
         content: "";
         position: absolute;
         right: 0;
-        top: 50%;
+        top: 55%;
         transform: translateY(-50%);
         background: transparent url("../img/plus.svg") no-repeat center center / contain;
         width: 17px;
@@ -85,16 +90,17 @@ Q&A
     }
 }
 
-.accordion_body {
+.accordion__body {
     display: none;
     border-radius: 4px;
     margin-top: 16px;
-    background-color: #3b69ff33;
-    padding: 16px;
+    background-color: #d7e1ff; // IEだと #3b69ff33 が表示されず、他のブラウザでも近い色に変換されていた。今回は全てfirefoxのスポイトで確認出来たカラーコードにする。
+    padding: 11px 16px;
     line-height: (24 / 16);
 
     @include mq("sp") {
         font-size: 14px;
         line-height: (20 / 14);
+        padding: 11px 12px;
     }
 }
