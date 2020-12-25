@@ -1410,7 +1410,7 @@ To top トップへ戻るボタン
 }
 
 .faqs {
-	background-size: auto 100%;
+	background-attachment: scroll;
 }
 
 }

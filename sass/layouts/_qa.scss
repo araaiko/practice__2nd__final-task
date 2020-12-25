@@ -14,7 +14,7 @@ Q&A
     // background-size: cover;
 
     @include mq("tab-only") {
-        background-size: auto 100%; // スマホとタブレット時の background-attachment: fixed; が効かない問題に対する対策
+        background-attachment: scroll; // スマホとタブレット時の background-attachment: fixed; が効かない問題に対する対策
     }
 }
 
