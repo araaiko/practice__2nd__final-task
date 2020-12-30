@@ -225,10 +225,6 @@ jQuery('#js-form input, #js-form textarea').on('change', function () {
     if (
         jQuery('#js-form input[name="entry.1672009915"]').val() !== "" && // inputタグのvalue(値=.val())が空ではない（!== ""）時で、かつ（&&）
         jQuery('#js-form input[name="entry.1317382001"]').val() !== ""  // inputタグのvalue(値=.val())が空ではない（!== ""）時で、かつ（&&）
-        // jQuery('#js-form input[type="email"]').val() !== "" &&
-        // jQuery('#js-form input[name="entry.1097290105"]:checked').val() !== "" && // 法人個人のラジオボタン
-        // jQuery('#js-form textarea').val() !== "" &&
-        // jQuery('#js-form input[name="entry.978374073"]').prop('checked') === true // プライバシーポリシーのチェックボタン
     ) {
         // 全て入力された時
         submit.prop('disabled', false) // ボタン有効に　＊input[type="submit"]タグ内に「disabled」を記述しておくこと！
