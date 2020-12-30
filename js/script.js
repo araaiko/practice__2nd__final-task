@@ -1,45 +1,48 @@
-// ドロワーメニュー （コンテンツごとスライド）
-$('.drawer-btn').on('click', function () {
-    if ($(this).hasClass('active')) {
-        $(this).removeClass('active');
-        $('.header__sp').removeClass('open');
-        $('main').removeClass('open');
-        $('nav').removeClass('open');
-        $('.overlay').removeClass('open');
-        $('.open-btn').show();
-        $('.close-btn').hide();
+// ドロワーメニュー① （コンテンツごとスライド）
+jQuery('.drawer-btn').on('click', function () {
+    if (jQuery(this).hasClass('active')) {
+        jQuery(this).removeClass('active');
+        jQuery('.header__brand').removeClass('open');
+        jQuery('main').removeClass('open');
+        jQuery('nav').removeClass('open');
+        jQuery('.overlay').removeClass('open');
+        jQuery('.open-btn').show();
+        jQuery('.close-btn').hide();
     } else {
-        $(this).addClass('active');
-        $('.header__sp').addClass('open');
-        $('main').addClass('open');
-        $('nav').addClass('open');
-        $('.overlay').addClass('open');
-        $('.open-btn').hide();
-        $('.close-btn').show();
+        jQuery(this).addClass('active');
+        jQuery('.header__brand').addClass('open');
+        jQuery('main').addClass('open');
+        jQuery('nav').addClass('open');
+        jQuery('.overlay').addClass('open');
+        jQuery('.open-btn').hide();
+        jQuery('.close-btn').show();
     }
     return false;
 });
 
-$('.overlay').on('click', function () {
-    if ($(this).hasClass('open')) {
-        $(this).removeClass('open');
-        $('.drawer-btn').removeClass('active');
-        $('.header__sp').removeClass('open');
-        $('main').removeClass('open');
-        $('nav').removeClass('open');
+// ドロワーメニュー② （オーバーレイを押してもメニューが閉じるようにする）
+jQuery('.overlay').on('click', function () {
+    if (jQuery(this).hasClass('open')) {
+        jQuery(this).removeClass('open');
+        jQuery('.drawer-btn').removeClass('active');
+        jQuery('.header__brand').removeClass('open');
+        jQuery('main').removeClass('open');
+        jQuery('nav').removeClass('open');
+        jQuery('.open-btn').show();
+        jQuery('.close-btn').hide();
     }
     return false;
 });
 
-// ドロワーメニュー （メニューを押すとドロワーが閉じる）
-$('a[href^="#"]').on('click', function () {
-    $('.overlay').removeClass('open');
-    $('.drawer-btn').removeClass('active');
-    $('.header__sp').removeClass('open');
-    $('main').removeClass('open');
-    $('nav').removeClass('open');
-    $('.open-btn').show();
-    $('.close-btn').hide();
+// ドロワーメニュー③ （メニューリンクを押すとドロワーが閉じる）
+jQuery('a[href^="#"]').on('click', function () {
+    jQuery('.overlay').removeClass('open');
+    jQuery('.drawer-btn').removeClass('active');
+    jQuery('.header__brand').removeClass('open');
+    jQuery('main').removeClass('open');
+    jQuery('nav').removeClass('open');
+    jQuery('.open-btn').show();
+    jQuery('.close-btn').hide();
     return false;
 });
 
@@ -47,7 +50,7 @@ $('a[href^="#"]').on('click', function () {
 var swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto', // CSSでスライド（.swiper-slide）の幅を調整しているので、ここは'auto'でOK
     spaceBetween: 40, // 任意のmarginを指定
-    breakpoints: { 
+    breakpoints: {
         767: {
             spaceBetween: 20, // 767px以下の時を書く
         }

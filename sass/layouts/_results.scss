@@ -2,14 +2,14 @@
 Results
 ====================== */
 .results {
-    @include mq('sp') {
+    @include mq("sp") {
         padding-bottom: 0;
     }
 }
 
 .results__box {
     width: 100%;
-    max-width: 1240px;
+    max-width: calc(50vw + 600px); // 左右どちらかのみ余白を作る
     margin-left: auto;
     background-color: $font-main-color;
     padding: 62px 0 60px 60px;

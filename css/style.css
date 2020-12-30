@@ -997,16 +997,10 @@ News
 /* IEの表示崩れ対策 */
 
 .news__item-body {
-	align-items: center;
-	display: flex;
 	font-size: 18px;
 	letter-spacing: 0.45px;
 	line-height: 1.55555;
 	width: calc(100% - (299px + 83px));
-}
-
-.news__item-arrow {
-	margin-left: auto;
 }
 
 /*=======================
@@ -1154,7 +1148,7 @@ Results
 .results__box {
 	background-color: #3e3e3e;
 	margin-left: auto;
-	max-width: 1240px;
+	max-width: calc(50vw + 600px);
 	padding: 62px 0 60px 60px;
 	width: 100%;
 }
@@ -1717,32 +1711,33 @@ input[type="checkbox"] + span::before {
 
 .header__sp {
 	background-color: #ffffff;
-	display: flex;
-	flex-direction: column;
 	height: 68px;
-	justify-content: center;
 	left: 0;
 	position: fixed;
 	top: 0;
-	transition: all 0.5s;
 	width: 100%;
 	z-index: 2;
 }
 
-.header__sp.open {
-	background-color: #ffffff;
-	transform: translateX(-250px);
-}
-
 .header__brand {
+	display: flex;
+	flex-direction: column;
 	height: inherit;
+	justify-content: center;
 	line-height: 68px;
+	transition: all 0.5s;
 }
 
 .header__brand a {
 	display: inline-block;
 	font-size: 23px;
 	font-weight: bold;
+	padding-left: 16px;
+}
+
+.header__brand.open {
+	background-color: #ffffff;
+	transform: translateX(-300px);
 }
 
 .drawer-btn {
@@ -1764,7 +1759,7 @@ input[type="checkbox"] + span::before {
 }
 
 .drawer-btn.active {
-	transform: translateX(-300px);
+	transform: translateX(-80vw);
 }
 
 .close-btn {
@@ -1801,19 +1796,19 @@ main {
 }
 
 main.open {
-	transform: translateX(-300px);
+	transform: translateX(-80vw);
 }
 
 nav {
 	background-color: #ffffff;
 	height: 100%;
-	padding-top: 161px;
+	padding-top: 153px;
 	position: fixed;
 	right: 0;
 	top: 0;
-	transform: translate(300px);
+	transform: translateX(80vw);
 	transition: all 0.5s;
-	width: 300px;
+	width: 80vw;
 	z-index: 10;
 }
 
@@ -1832,9 +1827,9 @@ nav li:nth-child(n + 2) {
 }
 
 .news {
+	margin-top: -40px;
 	padding: 0 0 60px;
-	position: absolute;
-	top: 629px;
+	position: relative;
 }
 
 .news__box {
@@ -1967,7 +1962,6 @@ nav li:nth-child(n + 2) {
 }
 
 .service {
-	margin-top: 575px;
 	padding-bottom: 61px;
 }
 
@@ -2024,14 +2018,6 @@ nav li:nth-child(n + 2) {
 .totop {
 	bottom: 13px;
 	right: 16px;
-}
-
-}
-
-@media screen and (max-width: 767px) and (max-width: 767px) {
-
-nav {
-	padding-top: 153px;
 }
 
 }

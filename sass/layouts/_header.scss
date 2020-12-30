@@ -56,43 +56,44 @@ Header (SP)
 ====================== */
 @include mq("sp") {
     .header__sp {
+        width: 100%; // 適宜指定
+        height: 68px; // 適宜指定
+        background-color: $color-white; // 適宜指定
         position: fixed;
         top: 0;
         left: 0;
         z-index: 2;
-        background-color: $color-white;
-        height: 68px;
-        width: 100%;
+    }
+
+    .header__brand {
         transition: all 0.5s;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-        &.open {
-            transform: translateX(-250px);
-            background-color: $color-white;
-        }
-    }
-
-    .header__brand {
         height: inherit;
-        line-height: 68px;
+        line-height: 68px; // 適宜指定
 
         a {
             display: inline-block;
-            font-size: 23px;
-            font-weight: bold;
+            font-size: 23px; // 適宜指定
+            font-weight: bold; // 適宜指定
+            padding-left: 16px; // 適宜指定
+        }
+
+        &.open {
+            transform: translateX(-300px); // 適宜指定
+            background-color: $color-white; // 適宜指定
         }
     }
 
     .drawer-btn {
-        width: 44px;
-        height: 44px;
+        width: 44px; // 適宜指定
+        height: 44px; // 適宜指定
         position: fixed;
-        top: 12px;
+        top: 12px; // 適宜指定
         right: 0;
         background: transparent;
-        padding-right: 12px;
+        padding-right: 12px; // 適宜指定
         cursor: pointer;
         z-index: 100;
         transform: translateX(0);
@@ -103,7 +104,7 @@ Header (SP)
         }
 
         &.active {
-            transform: translateX(-300px);
+            transform: translateX(-80vw); // 適宜指定
         }
     }
 
@@ -116,7 +117,7 @@ Header (SP)
         display: block;
         width: 0;
         height: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.5); // 適宜指定
         position: fixed;
         top: 0;
         left: 0;
@@ -138,40 +139,36 @@ Header (SP)
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
 
-    main.open {
-        transform: translateX(-300px);
+        &.open {
+            transform: translateX(-80vw); // 適宜指定
+        }
     }
 
     nav {
-        width: 300px;
+        width: 80vw; // 適宜指定 ※nav内で指定したtransform: translateX()の値と合わせる
         height: 100%;
-        padding-top: 161px;
-        background-color: $color-white;
+        padding-top: 153px; // 適宜指定
+        background-color: $color-white; // 適宜指定
         position: fixed;
         top: 0;
         right: 0;
         z-index: 10;
-        transform: translate(300px);
+        transform: translateX(80vw); // 適宜指定 ※nav内で指定したwidthの値と合わせる
         transition: all 0.5s;
 
-        @include mq("sp") {
-            padding-top: 153px;
+        &.open {
+            transform: translateZ(0);
         }
     }
 
-    nav.open {
-        transform: translateZ(0);
-    }
-
     nav li {
-        font-size: 18px;
-        text-align: center;
-        padding: 10px 0;
+        font-size: 18px; // 適宜指定
+        text-align: center; // 適宜指定
+        padding: 10px 0; // 適宜指定
 
         &:nth-child(n + 2) {
-            margin-top: 16px;
+            margin-top: 16px; // 適宜指定
         }
     }
 }
