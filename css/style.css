@@ -412,7 +412,7 @@ Contact Us
 ====================== */
 
 .contact {
-	background: transparent url("../img/contact-bg.png") no-repeat center center/cover;
+	background: transparent url("../img/min/contact-bg.png") no-repeat center center/cover;
 	padding-bottom: 60px;
 	padding-top: 60px;
 }
@@ -426,13 +426,30 @@ Contact Us
 }
 
 .contact__titles {
-	background: transparent url("../img/contact1.png") no-repeat center center/cover;
+	background-color: #000;
 	border-radius: 12px 12px 0 0;
 	height: 196px;
 	max-width: 960px;
+	overflow: hidden;
 	padding-bottom: 60px;
 	padding-top: 60px;
+	position: relative;
 	width: 100%;
+}
+
+.contact__titles::before {
+	background: transparent url("../img/min/contact1.jpg") no-repeat center center/cover;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.contact__title-body {
+	position: relative;
 }
 
 .contact__sub-title {
@@ -1063,7 +1080,7 @@ Q&A
 ====================== */
 
 .faqs {
-	background: transparent url("../img/qa-bg.png") no-repeat center center/cover;
+	background: transparent url("../img/min/qa-bg.png") no-repeat center center/cover;
 	background-attachment: fixed;
 	padding-bottom: 120px;
 	padding-top: 62px;
@@ -1296,7 +1313,7 @@ Top
 ====================== */
 
 .top {
-	background: transparent url("../img/mv.png") no-repeat center center/cover;
+	background: transparent url("../img/min/mv.png") no-repeat center center/cover;
 }
 
 .top__text {
