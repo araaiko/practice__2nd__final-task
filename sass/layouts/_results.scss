@@ -55,6 +55,15 @@ Results
     }
 }
 
+.swiper-slide-img {
+    width: 100%;
+    max-width: 400px;
+
+    @include mq("sp") {
+        max-width: 274px;
+    }
+}
+
 .swiper-slide-body {
     background-color: $color-white;
     padding: 16px 16px 20px;

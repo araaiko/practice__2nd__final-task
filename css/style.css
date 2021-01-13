@@ -385,6 +385,13 @@ Comments
 	width: 132px;
 }
 
+.comments__img img {
+	height: 100%;
+	max-height: 100px;
+	max-width: 100px;
+	width: 100%;
+}
+
 .comments__text {
 	line-height: 1.5;
 	width: calc(100% - 132px);
@@ -1193,6 +1200,11 @@ Results
 	opacity: 0.7;
 }
 
+.swiper-slide-img {
+	max-width: 400px;
+	width: 100%;
+}
+
 .swiper-slide-body {
 	background-color: #ffffff;
 	padding: 16px 16px 20px;
@@ -1942,6 +1954,10 @@ nav li:nth-child(n + 2) {
 }
 
 .swiper-slide {
+	max-width: 274px;
+}
+
+.swiper-slide-img {
 	max-width: 274px;
 }
 
