@@ -96,8 +96,10 @@ button
 }
 
 .news-btn {
-    @include mq("sp") {
-        padding-left: 99px;
+    a {
+        @include mq("sp") {
+            padding-left: 99px;
+        }
     }
 }
 
