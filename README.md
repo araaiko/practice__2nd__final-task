@@ -1,2 +1,2 @@
-# LP__template
-LP用のテンプレ
+# practice__2nd__final-task
+（サンプル）LPをデザインカンプからコーディング
